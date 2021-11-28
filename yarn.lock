@@ -334,6 +334,11 @@
   resolved "https://registry.yarnpkg.com/@types/trusted-types/-/trusted-types-2.0.2.tgz#fc25ad9943bcac11cceb8168db4f275e0e72e756"
   integrity sha512-F5DIZ36YVLE+PN+Zwws4kJogq47hNgX3Nx6WyDJ3kcplxyke3XIzB8uK5n/Lpm1HBsbGzd6nmGehL8cPekP+Tg==
 
+"@unicode/unicode-13.0.0@^1.2.1":
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/@unicode/unicode-13.0.0/-/unicode-13.0.0-1.2.1.tgz#dc89c6a5719187c35e803df0df31690fa9aff0fd"
+  integrity sha512-8NDE4zZASktxJe+hV13K795wefyx+wRhu3Wl7TJ8fzsKx95CHsgTFmYRTscqna90zpUz6YBjGyqXHBI2ubiMaw==
+
 abbrev@1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-1.1.1.tgz#f8f2c887ad10bf67f634f005b6987fed3179aac8"

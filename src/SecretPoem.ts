@@ -1,22 +1,21 @@
 import { LitElement, html } from 'lit'
-import { state } from 'lit/decorators.js'
 
 export class SecretPoem extends LitElement {
   static properties = {
     isLoading: { state: true },
-    secretPoem: { state: true },
+    secret: { state: true },
   }
 
   // TODO remove placeholder
-  private secretPoem?: string = `The city's always on my mind
+  private secret?: string = `The city's always on my mind
   All the morning talkin' 'bout what you know
   The timebends and the highway blues
   You could walk on water forever`
   private isLoading: boolean = false
 
   firstUpdated() {
-    if (!this.secretPoem) {
-      this.generateSecretPoem()
+    if (!this.secret) {
+      this.generateSecret()
     }
   }
 
@@ -31,9 +30,9 @@ export class SecretPoem extends LitElement {
       </p>
 
       <pre
-        class="inline-block bg-indigo-50 text-indigo-700 border-2 border-indigo-100 rounded whitespace-pre-line font-sans my-4 py-3 p-3"
+        class="inline-block bg-indigo-50 text-indigo-700 border-2 border-indigo-100 rounded whitespace-pre-line my-4 py-3 p-3"
       >
-        ${this.secretPoem}
+        ${this.secret}
       </pre
       >
 
@@ -41,7 +40,7 @@ export class SecretPoem extends LitElement {
 
       <button
         class="transition-all bg-indigo-600 hover:bg-indigo-500 text-white rounded py-2 px-4 font-medium shadow-md hover:shadow-sm"
-        @click=${this.generateSecretPoem}
+        @click=${this.generateSecret}
         ?disabled=${this.isLoading}
       >
         ${this.isLoading ? 'Loading...' : 'Generate new secret poem'}
@@ -49,7 +48,7 @@ export class SecretPoem extends LitElement {
     `
   }
 
-  private async generateSecretPoem() {
+  private async generateSecret() {
     this.isLoading = true
 
     const resp = await fetch('/api/poem', {
@@ -60,7 +59,7 @@ export class SecretPoem extends LitElement {
 
     const lines = (await resp.json()).lyrics
 
-    this.secretPoem = lines.split('\n').slice(0, 4).join('\n')
+    this.secret = lines.split('\n').slice(0, 4).join('\n')
     this.isLoading = false
   }
 }
