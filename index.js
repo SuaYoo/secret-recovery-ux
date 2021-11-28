@@ -1,1 +1,3 @@
-console.log('TODO')
+import { App } from './App'
+
+customElements.define('srux-app', App)

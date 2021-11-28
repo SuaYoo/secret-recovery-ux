@@ -11,5 +11,8 @@
   },
   "devDependencies": {
     "snowpack": "^3.8.8"
+  },
+  "dependencies": {
+    "lit": "^2.0.2"
   }
 }
