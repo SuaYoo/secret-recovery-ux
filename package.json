@@ -1,0 +1,15 @@
+{
+  "name": "secret-recovery-ux",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:SuaYoo/secret-recovery-ux.git",
+  "license": "SEE LICENSE IN LICENSE",
+  "private": true,
+  "scripts": {
+    "serve": "snowpack dev",
+    "build": "snowpack build"
+  },
+  "devDependencies": {
+    "snowpack": "^3.8.8"
+  }
+}
