@@ -37,10 +37,10 @@ export class App extends LitElement {
         <main>
           <h2 class="text-2xl font-medium mt-12 mb-3">
             Method 1:
-            <span class="text-indigo-700"
+            <span
               >Secret Recovery
               <a
-                class="text-yellow-700 hover:text-yellow-600"
+                class="text-indigo-500 hover:text-indigo-400"
                 href="https://en.wikipedia.org/wiki/Hermeticism_(poetry)"
                 target="_blank"
                 >Hermetic</a
@@ -51,7 +51,7 @@ export class App extends LitElement {
           <p class="my-3">
             An
             <a
-              class="text-yellow-700 hover:text-yellow-600"
+              class="text-indigo-500 hover:text-indigo-400"
               href="https://boredhumans.com/poetry_generator.php"
               target="_blank"
               >AI-generated poem</a
@@ -67,10 +67,10 @@ export class App extends LitElement {
 
           <h2 class="text-2xl font-medium mt-12 mb-3">
             Method 2:
-            <span class="text-indigo-700"
+            <span
               >Secret Recovery
               <a
-                class="text-yellow-700 hover:text-yellow-600"
+                class="text-indigo-500 hover:text-indigo-400"
                 href="https://en.wikipedia.org/wiki/Pictogram"
                 target="_blank"
                 >Pictograph</a

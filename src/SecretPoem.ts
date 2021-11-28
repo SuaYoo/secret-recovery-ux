@@ -27,7 +27,7 @@ export class SecretPoem extends LitElement {
 
       <h3 class="text-lg font-bold">Your Secret Recovery Poem</h3>
       <pre
-        class="inline-block bg-indigo-50 text-indigo-700 border-2 border-indigo-100 rounded whitespace-pre-line my-4 py-3 p-3"
+        class="inline-block bg-green-50 text-green-700 border-2 border-green-100 rounded whitespace-pre-line my-4 py-3 p-3"
       >
         ${this.secret}
       </pre
@@ -35,7 +35,7 @@ export class SecretPoem extends LitElement {
 
       <p class="my-3">Too hard to memorize?</p>
       <button
-        class="transition-all bg-indigo-600 hover:bg-indigo-500 text-white rounded py-2 px-4 font-medium shadow-md hover:shadow-sm"
+        class="transition-all bg-green-600 hover:bg-green-500 text-white rounded py-2 px-4 font-medium shadow-md hover:shadow-sm"
         @click=${this.generateSecret}
         ?disabled=${this.isLoading}
       >

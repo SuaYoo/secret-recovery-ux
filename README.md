@@ -4,7 +4,7 @@ UX study on secret recovery phrases
 
 ## Quickstart
 
-**Prerequisite: Needs to run somewhere where cURL is supported**
+**Prerequisite: Expects `curl` to exist**
 
 Install dependencies:
 
