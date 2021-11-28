@@ -6,13 +6,7 @@ export class SecretPoem extends LitElement {
     secret: { state: true },
   }
 
-  // TODO remove placeholder
-  private secret?: string = `Title: I'm An Old Cowboy
-
-  So what's the world to do
-  I'm an old cowboy
-  Well, I'm an old cowboy
-  But I love big machine`
+  private secret?: string
   private isLoading: boolean = false
 
   firstUpdated() {
