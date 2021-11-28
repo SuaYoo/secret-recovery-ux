@@ -9,7 +9,7 @@ UX experiment with generating secret recovery phrases.
 
 ## Quickstart
 
-**Prerequisite: Expects `curl` to exist**
+**Prerequisite: Dev server expects `curl` to exist**
 
 Install dependencies:
 
