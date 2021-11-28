@@ -23,7 +23,7 @@ export class SecretPictograph extends LitElement {
       <pre
         class="text-6xl inline-block bg-pink-50 text-pink-700 border-2 border-pink-100 rounded whitespace-pre-line my-4 py-3 p-3"
       >
-        ${this.secret}
+        ${this.secret || 'Loading...'}
       </pre
       >
 

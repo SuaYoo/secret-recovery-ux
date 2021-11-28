@@ -23,7 +23,7 @@ export class SecretPoem extends LitElement {
       <pre
         class="inline-block bg-green-50 text-green-700 border-2 border-green-100 rounded whitespace-pre-line my-4 py-3 p-3"
       >
-        ${this.secret}
+        ${this.secret || 'Loading...'}
       </pre
       >
 
