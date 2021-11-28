@@ -5,9 +5,9 @@ const emojisList = require('./data/emojis')
 
 module.exports = {
   routes: [
+    // Proxy to poem generator from
+    // https://boredhumans.com/poetry_generator.php
     {
-      // Proxy to poem generator from
-      // https://boredhumans.com/poetry_generator.php
       src: '/api/poem',
       dest: (req, res) => {
         const resp =
@@ -21,8 +21,8 @@ module.exports = {
         return res.end(resp.toString('utf-8'))
       },
     },
+    // Emojis API
     {
-      // Emojis API
       src: '/api/emojis',
       dest: (req, res) => {
         const count = new URL(
@@ -39,6 +39,16 @@ module.exports = {
             ),
             count: count,
             total: total,
+          })
+        )
+      },
+    },
+    {
+      src: '/api/emojis/total',
+      dest: (req, res) => {
+        return res.end(
+          JSON.stringify({
+            total: emojisList.length,
           })
         )
       },

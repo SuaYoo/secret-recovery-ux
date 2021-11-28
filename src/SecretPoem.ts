@@ -7,10 +7,12 @@ export class SecretPoem extends LitElement {
   }
 
   // TODO remove placeholder
-  private secret?: string = `The city's always on my mind
-  All the morning talkin' 'bout what you know
-  The timebends and the highway blues
-  You could walk on water forever`
+  private secret?: string = `Title: I'm An Old Cowboy
+
+  So what's the world to do
+  I'm an old cowboy
+  Well, I'm an old cowboy
+  But I love big machine`
   private isLoading: boolean = false
 
   firstUpdated() {
@@ -24,10 +26,6 @@ export class SecretPoem extends LitElement {
       <link rel="stylesheet" type="text/css" href="/global.css" />
 
       <h3 class="text-lg font-medium">Your Secret Recovery Poem</h3>
-      <p class="my-3">
-        Your secret recovery poem can be used to recover your account if you're
-        locked out.
-      </p>
 
       <pre
         class="inline-block bg-indigo-50 text-indigo-700 border-2 border-indigo-100 rounded whitespace-pre-line my-4 py-3 p-3"
@@ -57,9 +55,11 @@ export class SecretPoem extends LitElement {
       },
     })
 
-    const lines = (await resp.json()).lyrics
-
-    this.secret = lines.split('\n').slice(0, 4).join('\n')
+    const data = await resp.json()
+    this.secret = `Title: ${data.title}\n\n${data.lyrics
+      .split('\n')
+      .slice(0, 4)
+      .join('\n')}`
     this.isLoading = false
   }
 }

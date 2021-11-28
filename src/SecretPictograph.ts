@@ -4,12 +4,10 @@ export class SecretPictograph extends LitElement {
   static properties = {
     isLoading: { state: true },
     secret: { state: true },
-    emojisTotal: { state: true },
   }
 
   private secret?: string
   private isLoading: boolean = false
-  private emojisTotal?: number
 
   firstUpdated() {
     if (!this.secret) {
@@ -22,12 +20,6 @@ export class SecretPictograph extends LitElement {
       <link rel="stylesheet" type="text/css" href="/global.css" />
 
       <h3 class="text-lg font-medium">Your Secret Recovery Pictograph</h3>
-
-      <p class="my-3">
-        A picture is worth a thousand words. And when there are
-        ${this.emojisTotal ? this.emojisTotal.toLocaleString() : '...'}
-        pictures, you get... a lot of words.
-      </p>
 
       <pre
         class="text-6xl inline-block bg-indigo-50 text-indigo-700 border-2 border-indigo-100 rounded whitespace-pre-line my-4 py-3 p-3"
@@ -68,6 +60,5 @@ export class SecretPictograph extends LitElement {
 
     this.isLoading = false
     this.secret = groupedEmojis.join('\n')
-    this.emojisTotal = total
   }
 }

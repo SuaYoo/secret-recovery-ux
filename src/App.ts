@@ -1,6 +1,18 @@
 import { LitElement, html } from 'lit'
 
 export class App extends LitElement {
+  static properties = {
+    emojisCount: { state: true },
+  }
+
+  private emojisCount?: number
+
+  async firstUpdated() {
+    this.emojisCount = (
+      await fetch('/api/emojis/total').then((resp) => resp.json())
+    ).total
+  }
+
   render() {
     return html`
       <link rel="stylesheet" type="text/css" href="/global.css" />
@@ -36,7 +48,12 @@ export class App extends LitElement {
             Method 2:
             <span class="text-indigo-700">Secret Recovery Pictograph</span>
           </h2>
-          <p class="mb-3">
+          <p class="my-3">
+            If a picture is worth <em>you know</em>,
+            ${this.emojisCount ? this.emojisCount.toLocaleString() : '...'}
+            pictures are worth... a lot of words.
+          </p>
+          <p class="my-3">
             Combined with a randomly generated title, you could encourage the
             user to create a memorizable story from the emoji sequence.
           </p>
