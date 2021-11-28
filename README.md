@@ -1,6 +1,11 @@
-# secret-recovery-ux
+# Recovery Secret UX
 
-UX study on secret recovery phrases
+UX experiment with generating secret recovery phrases.
+
+![Poem example](./docs/poem.png)
+![Pictograph example](./docs/pictograph.png)
+
+> **Warning** I am not a security expert and this is not security advice. This demo has not been reviewed by a security expert and is not intended to be used as an actual secrets generator.
 
 ## Quickstart
 
