@@ -1,3 +1,3 @@
-import { App } from './App'
+import { App } from './src/App'
 
 customElements.define('srux-app', App)
