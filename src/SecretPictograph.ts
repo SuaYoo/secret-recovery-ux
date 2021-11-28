@@ -19,8 +19,7 @@ export class SecretPictograph extends LitElement {
     return html`
       <link rel="stylesheet" type="text/css" href="/global.css" />
 
-      <h3 class="text-lg font-medium">Your Secret Recovery Pictograph</h3>
-
+      <h3 class="text-lg font-bold">Your Secret Recovery Pictograph</h3>
       <pre
         class="text-6xl inline-block bg-indigo-50 text-indigo-700 border-2 border-indigo-100 rounded whitespace-pre-line my-4 py-3 p-3"
       >
@@ -29,7 +28,6 @@ export class SecretPictograph extends LitElement {
       >
 
       <p class="my-3">Too hard to memorize?</p>
-
       <button
         class="transition-all bg-indigo-600 hover:bg-indigo-500 text-white rounded py-2 px-4 font-medium shadow-md hover:shadow-sm"
         @click=${this.generateSecret}
